@@ -213,6 +213,7 @@ exclude:
   - _pages/news.md
   - _pages/books.md
   - _pages/dropdown.md
+  - assets/jupyter
 
 keep_files:
   - CNAME
