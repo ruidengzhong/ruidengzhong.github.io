@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Strain Gauge PCB
-description: Altium, Soldering, MoTeC M1 Tune
+description: Altium, PCB Assembly, Soldering, MoTeC M1 Tune
 img: assets/img/strainGaugePCB.png
 importance: 2
 ---
 
+Collaboration with Christian Wacker
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -17,9 +18,12 @@ importance: 2
 </div>
 
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/strainGaugePCB.png" title="example image" class="img-fluid rounded z-depth-1" %}
+div class="row justify-content-sm-center">
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/strainGaugePCB.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/strainGaugePCB3d.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

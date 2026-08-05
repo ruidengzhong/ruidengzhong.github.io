@@ -1,11 +1,9 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
+title: Gate-Level 16-Bit MIPS-Style CPU
+description: Logisim, Digital Logic Design, Computer Architecture
 img: assets/img/7.jpg
-redirect: https://unsplash.com
 importance: 3
-category: work
 ---
 
 Every project has a beautiful feature showcase page.
