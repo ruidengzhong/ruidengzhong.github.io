@@ -11,7 +11,7 @@ profile:
   more_info:
 
 #selected_papers: true # includes a list of papers marked as "selected={true}"
-#social: true # includes social icons at the bottom of the page
+social: true # includes social icons at the bottom of the page
 
 #announcements:
 #  enabled: true # includes a list of news items
@@ -24,4 +24,4 @@ profile:
 #  limit: 3 # leave blank to include all the blog posts
 ---
 
-I’m Ruideng Zhong, an engineering student who’s passionate about developing, testing, and improving anything in both the physical and the theoretical worlds. I enjoy hands-on projects, learning new tools, and challenging myself to understand how things work from the inside out.
+I’m Ruideng Zhong, an engineering student who’s passionate about developing, testing, and improving anything in both the physical and the theoretical worlds. I enjoy hands-on projects, learning new tools, and challenging myself to understand how things work from the inside out. Currently racing with Duke Motorsports, defending the planet with the Duke SPACE Initiative, and working on my next big project.

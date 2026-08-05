@@ -1,12 +1,25 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Custom Hytera Radio Harness
+description: KiCAD, Digital Multimeter, Crimping, Splicing
+img: assets/img/project1_radio.jpeg
 importance: 1
-category: work
-related_publications: true
+#category: work
+#related_publications: true
 ---
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/radioHarnessSchematic.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Schematic by James Hakewill, at http://www.jameshakewill.com/radio-harness.pdf
+</div>
+
+
+{% comment %}
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
@@ -79,3 +92,4 @@ Here's the code for the last row of images above:
 ```
 
 {% endraw %}
+{% endcomment %}
