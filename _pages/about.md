@@ -2,17 +2,19 @@
 layout: about
 title: About Me
 permalink: /
-subtitle: Student. Engineer. Problem Solver.
+#subtitle: Student. Engineer. Problem Solver.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Duke University</p>
-    <p>Durham, NC and Clemson, SC</p>
-    <p>Major: Electrical and Computer Engineering</p>
-    <p>Minor: Economics</p>
+    Duke University<br>
+    Durham, NC and Clemson, SC<br>
+    Major: ECE<br>
+    Minor: Economics<br>
+    Expected Graduation: May 2029<br>
+    Languages: English·Chinese·German
 
 
 #selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -28,15 +30,16 @@ social: true # includes social icons at the bottom of the page
 #  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
 #  limit: 3 # leave blank to include all the blog posts
 ---
+## Student. Engineer. Problem Solver.
 
-I’m Ruideng Zhong, an engineering student who’s passionate about developing, testing, and improving anything in both the physical and the theoretical worlds. I enjoy hands-on projects, learning new tools, and challenging myself to understand how things work from the inside out. Currently racing with Duke Motorsports, defending the planet with the Duke SPACE Initiative, and working on my next big project.
+I’m Ruideng Zhong, an electrical and computer engineering student who’s passionate about developing, testing, and improving anything in both the physical and the theoretical worlds. I enjoy hands-on projects, learning new tools, and challenging myself to understand how things work from the inside out. Currently racing with Duke Motorsports, defending the planet with the Duke SPACE Initiative, and building the next big thing.
+
+Open to internship or research opportunities across all fields related to electrical and computer engineering - with a particular focus on computer architecture and signal processing.
+
+## Out of the Classroom
 
 
-
-### Out of the Classroom
-
-
-Outside of my engineering work, I am your typical college student living out the college dream. As a clarinet player and treasurer in the Duke Marching Band, I get to support our football and basketball teams while enjoying my love of making music. In my spare time, I enjoy running, hiking, playing both the clarinet and the piano, designing builds in Minecraft, playing spikeball and frisbee, and cheering on Tottenham Hotspur (COYS!), Duke athletics, and McLaren F1 Team!
+Outside of my engineering work, I am your typical college student living out the college dream. As a clarinet player and treasurer in the Duke Marching Band, I get to support our football and basketball teams while enjoying my love of making music. In my spare time, I enjoy running, hiking, playing both the clarinet and the piano, designing builds in Minecraft playing spikeball and frisbee, and cheering on Tottenham Hotspur (COYS!), Duke athletics, and McLaren F1 Team!
 
 
 <div class="row justify-content-sm-center">
