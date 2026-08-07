@@ -164,6 +164,9 @@ collections:
     output: true
   teachings:
     output: true
+  experiences:
+    output: true
+    permalink: /experiences/:name/
 
 # -----------------------------------------------------------------------------
 # Jekyll settings

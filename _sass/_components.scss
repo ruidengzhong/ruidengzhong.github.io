@@ -163,6 +163,53 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Experiences
+
+.experiences-list {
+  margin-top: 2rem;
+}
+
+.experience-entry {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.experience-entry h2 {
+  margin-bottom: 0.35rem;
+}
+
+.experience-company {
+  margin-bottom: 0.2rem;
+}
+
+.experience-dates,
+.experience-location {
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.experience-page {
+  max-width: 900px;
+}
+
+.experience-header {
+  margin-bottom: 2rem;
+}
+
+.experience-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.experience-image {
+  margin-bottom: 2rem;
+}
+
+.experience-content {
+  margin-top: 1.5rem;
+}
+
 // Repositories
 
 @media (min-width: 768px) {

@@ -1,0 +1,41 @@
+---
+layout: page
+---
+
+<article class="experience-page">
+  <header class="experience-header">
+
+    {% if page.company %}
+      <p class="experience-company">{{ page.company }}</p>
+    {% endif %}
+
+    {% if page.location %}
+      <p class="experience-location">{{ page.location }}</p>
+    {% endif %}
+
+    {% if page.start_date or page.end_date %}
+      <p class="experience-dates">
+        {{ page.start_date }}
+        –
+        {% if page.end_date %}
+          {{ page.end_date }}
+        {% else %}
+          Present
+        {% endif %}
+      </p>
+    {% endif %}
+  </header>
+
+  {% if page.image %}
+    <div class="experience-image">
+      <img
+        src="{{ page.image | relative_url }}"
+        alt="{{ page.image_alt | default: page.title }}"
+        class="img-fluid rounded z-depth-1">
+    </div>
+  {% endif %}
+
+  <div class="experience-content">
+    {{ content }}
+  </div>
+</article>
