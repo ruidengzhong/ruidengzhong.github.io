@@ -3,7 +3,7 @@ layout: page
 title: Gate-Level 16-Bit MIPS-Style CPU
 description: Logisim, Digital Logic Design, Computer Architecture
 img: assets/img/cpu.png
-importance: 3
+importance: 4
 ---
 
 

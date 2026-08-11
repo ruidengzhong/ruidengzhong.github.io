@@ -3,7 +3,7 @@ layout: page
 title: Doppler String Phantom
 description: Python, Arduino, OnShape, 3D Printing, Ultrasound, Digital Multimeter
 img: assets/img/dopplerPhoto.jpg
-importance: 4
+importance: 6
 ---
 
 Collaboration with Gustav Koh, Rohan Deshmukh, and Michael Messina

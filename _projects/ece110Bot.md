@@ -3,7 +3,7 @@ layout: page
 title: Line-Tracking Bot with Thermal Sensor
 description: Arduino Mega, IR Sensor, QTI Sensor, LCD, Breadboarding
 img: assets/img/idcTop.jpg
-importance: 6
+importance: 5
 ---
 
 Collaboration with Jonathan Ransom
