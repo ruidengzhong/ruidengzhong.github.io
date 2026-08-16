@@ -7,7 +7,7 @@ start_date: August 2023
 end_date: August 2024
 order: 3
 description: Researched molecular behavior of C₆₀ fullerene using LAAMPS
-image: 
+image: /assets/img/flourDanielBuilding.jpg
 image_alt: 
 ---
 
@@ -17,7 +17,7 @@ My work focused on exploring whether controlled compression could produce a carb
 
 The experience was completed at ASME's IMECE 2024 in Portland, Oregon, where I presented my findings during a poster session.
 
-Some of my work included:
+### Some of my work included:
 
 - Creating and running molecular dynamics simulations of FCC C₆₀ lattice structures
 - Investigating the effects of temperature, shear compression, and different interatomic potentials
@@ -29,7 +29,7 @@ Some of my work included:
 - Evaluating temperature, volume, potential energy, shear deformation, and normal and shear stresses
 - Identifying anomalous structural behavior and using simulation results to guide future studies
 
-Skills Developed:
+### Skills Developed:
 
 - Molecular Dynamics: LAMMPS, atomistic modeling
 - Programming: C++, Python
@@ -38,3 +38,5 @@ Skills Developed:
 - Visualization: VMD
 - Computational Materials Science: C₆₀ fullerenes, carbon nanostructures, lattice deformation
 - Simulation Analysis: Temperature, volume, energy, deformation, and stress analysis
+
+Photo Credit: Clemson University at https://www.clemson.edu/cecas/departments/me/research/

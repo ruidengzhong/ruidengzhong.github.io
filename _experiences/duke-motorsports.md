@@ -11,16 +11,16 @@ image: /assets/img/motorsportsCar.jpg
 image_alt: Duke Motorsports car
 ---
 
-As a member of Duke Motorsports, I work on the electrical systems of a Formula SAE race car. My responsibilities include designing PCBs, testing components, tuning sensors and modules, fabricating wire harnesses, troubleshooting electrical issues, and collaborating with other team members and other subsystems to integrate the vehicle’s systems.
+As a member of [Duke Motorsports](https://www.dukefsae.com/), I work on the electrical systems of a Formula SAE race car. My responsibilities include designing PCBs, testing components, tuning sensors and modules, fabricating wire harnesses, troubleshooting electrical issues, and collaborating with other team members and other subsystems to integrate the vehicle’s systems.
 
-Some of my work includes:
+### Some of my work includes:
 
 - Designing, fabricating, and testing electrical harnesses
 - Designing PCBs for the Brake System Plausibility Device, DC-DC converter, Steering Wheel, Strain Gauge, and Light gates
 - Using digital multimeters and other testing equipment
 - Tuning the engine with MoTeC M1 Tune
 
-Skills Developed:
+### Skills Developed:
 
 - PCB Design: Altium, KiCAD
 - Harness Design: RapidHarness

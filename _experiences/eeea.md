@@ -13,7 +13,7 @@ image_alt:
 
 As the Quality Engineering Intern, I supported EEEA Inc's Quality Management System (QMS) by helping maintain controlled documentation, standardize internal processes, supporting continuous improvement activities, and assisting in preparing for AS9100 certification.
 
-Some of my responsibilities were:
+### Some of my responsibilities were:
 - Supporting QMS maintenance by updating quality procedures, forms, work instructions, and controlled records.
 - Performing document control tasks, including revision tracking, change log updates, archival support, and distribution of current versions.
 - Assisting in standards creation by drafting and formatting process standards aligned with customer, regulatory, and internal requirements.

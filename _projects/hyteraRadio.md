@@ -8,6 +8,9 @@ importance: 2
 #related_publications: true
 ---
 
+Building a custom radio harness for our radio system, with steering wheel push-to-talk capabilities.
+
+Currently in progress.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
