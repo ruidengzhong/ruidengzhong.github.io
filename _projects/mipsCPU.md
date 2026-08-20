@@ -41,6 +41,15 @@ The primary execution stages are:
 6. Write-back and state update
 - Results are written back to the selected register when required, and the program counter is updated for sequential execution or control-flow instructions.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/cpu.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The main block of the CPU
+</div>
+
 ## Custom Arithmetic Logic Unit
 I designed a custom ALU to perform the processor’s arithmetic and logical operations. The ALU was constructed from gate-level combinational logic and multiplexers that select the required operation based on control signals from the control unit.
 
@@ -101,6 +110,15 @@ These circuits were implemented using combinations of wiring, multiplexers, and 
 
 ## Custom Control Unit
 I designed a custom control unit to decode instructions and generate the datapath control signals required for each instruction type.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/cpuControl.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The inner workings of my custom control block.
+</div>
 
 The control unit determines:
 
