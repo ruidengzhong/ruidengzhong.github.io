@@ -20,8 +20,10 @@ cv:
         studyType: BSE
         start_date: Aug 2025
         end_date: May 2029
-        score: ""
+        score: "Cumulative GPA: 4.0, Major GPA: 4.0"
         courses: 
+          - Microelectronics
+          - Signals and Systems
           - Computer Architecture
           - Fundamentals of Electrical and Computer Engineering
           - Data Structures and Algorithms
