@@ -20,15 +20,16 @@ cv:
         studyType: BSE
         start_date: Aug 2025
         end_date: May 2029
-        score: "Cumulative GPA: 4.0, Major GPA: 4.0"
+        score: ""
         courses: 
+        
           - Microelectronics
           - Signals and Systems
           - Computer Architecture
           - Fundamentals of Electrical and Computer Engineering
           - Data Structures and Algorithms
           - Introductory Electricity, Magnetism, and Optics
-        highlights:
+        highlights: Cumulative GPA - 4.0, Major GPA - 4.0
 
     Experience:      
       - company: Duke Motorsports (FSAE)
