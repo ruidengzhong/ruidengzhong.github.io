@@ -9,7 +9,7 @@ importance: 2
 ---
 
 
-## Overview
+## Project Overview
 
 As part of Duke Motorsports, I designed and built a custom radio harness for the race car. The harness provides the electrical connection between the car's steering-wheel radio button, the driver's helmet, and the onboard radio system.
 
