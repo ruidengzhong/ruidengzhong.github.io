@@ -8,17 +8,6 @@ importance: 2
 #related_publications: true
 ---
 
-Building a custom radio harness for our radio system, with steering wheel push-to-talk capabilities.
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/radioHarnessSchematic.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Schematic by James Hakewill, at http://www.jameshakewill.com/radio-harness.pdf
-</div>
-
 
 ## Overview
 
@@ -37,6 +26,14 @@ The harness connects three main parts of the car's communication system:
 Pressing the steering-wheel radio button allows the driver to activate communication through the radio system. The helmet-side connector provides the connection to the driver's microphone and speakers, while the radio-side connector interfaces with the vehicle's radio hardware.
 
 The harness was designed around the existing connector locations and routing constraints of the car. This required considering cable length, connector accessibility, strain relief, and the movement of the steering wheel during operation.
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/radioHarnessSchematic.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Schematic by James Hakewill, at http://www.jameshakewill.com/radio-harness.pdf
+</div>
 
 ## Building the Harness
 
