@@ -82,13 +82,13 @@ cv:
     Skills:
       - name: Software
         icon: fa-solid fa-hashtag
-        keywords: "Altium, Cadence OrCAD, KiCAD, Logisim, RapidHarness, MoTeC M1 Tune, SolidWorks"
+        keywords: "Altium, Cadence OrCAD, KiCAD, Xilinx Vivado, Logisim, RapidHarness, MoTeC M1 Tune, MoTeC I2 Pro, SolidWorks, OnShape"
       - name: Programming and Systems
         icon: fa-solid fa-hashtag
-        keywords: "Python, Java, C, C++, MATLAB, Verilog, Git, Linux, Unix"
+        keywords: "Python, Java, C, C++, MATLAB, MATLAB Simulink, Verilog, HTML, Git, Linux, Unix"
       - name: Laboratory Equipment
         icon: fa-solid fa-hashtag
-        keywords: "Digital Multimeters, Oscilloscopes, Function Generators, Soldering"
+        keywords: "Digital Multimeters, Oscilloscopes, Function Generators, Power Supplies, Soldering"
       - name: Productivity
         icon: fa-solid fa-hashtag
         keywords: "Microsoft 365 (Excel, PowerPoint, Word), Google Suite, Airtable, Trello"

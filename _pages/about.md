@@ -36,10 +36,10 @@ I’m Ruideng Zhong, an electrical and computer engineering student at [Duke Uni
 
 Open to internship or research opportunities across all fields related to electrical and computer engineering - with a particular focus on computer architecture and signal processing.
 
+
 ## Out of the Classroom
 
-
-Outside of my engineering work, I am your typical college student living out the college dream. As a clarinet player and treasurer in the [Duke Marching Band](https://www.dukeband.org/), I get to support our football and basketball teams while enjoying my love of making music. In my spare time, I enjoy running, hiking, playing both the clarinet and the piano, designing builds in Minecraft playing spikeball and frisbee, and cheering on Tottenham Hotspur (COYS!), Duke athletics, and McLaren F1 Team!
+Outside of my engineering work, I am your typical college student living out the college dream. As a clarinet player and treasurer in the [Duke Marching Band](https://www.dukeband.org/), I get to support our football and basketball teams while enjoying my love of making music. In my spare time, I enjoy running, hiking, playing both the clarinet and the piano, designing builds in Minecraft, playing spikeball and frisbee, and cheering on Tottenham Hotspur (COYS!), Duke athletics, and McLaren F1 Team!
 
 
 <div class="row justify-content-sm-center">
