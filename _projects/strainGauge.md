@@ -3,7 +3,7 @@ layout: page
 title: Strain Gauge PCB
 description: Altium, PCB Assembly, Soldering, MoTeC M1 Tune
 img: assets/img/strainGaugePCB.png
-importance: 3
+importance: 16
 ---
 
 

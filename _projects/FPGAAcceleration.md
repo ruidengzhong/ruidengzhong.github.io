@@ -3,7 +3,7 @@ layout: page
 title: Hardware Acceleration on a Xilinx Zynq-7020 FPGA
 description: FPGA, Vivado, Verilog
 img: 
-importance: 7
+importance: 20
 ---
 
 ## Project Overview
