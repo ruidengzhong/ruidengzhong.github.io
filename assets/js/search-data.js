@@ -97,6 +97,11 @@ ninja.data = [{
           description: "Altium, PCB Assembly, Soldering, MoTeC M1 Tune",
           section: "Projects",handler: () => {
               window.location.href = "/projects/strainGauge/";
+            },},{id: "projects-fsae-wiring-harness",
+          title: 'FSAE Wiring Harness',
+          description: "RapidHarness, Altium, SolidWorks, Wiring Harness Fabrication",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/wireHarness2027/";
             },},{id: "teachings-ece-cs-250-computer-architecture",
           title: 'ECE/CS 250 - Computer Architecture',
           description: "The objective of this course is to learn how computers work, focusing on how the computer hardware executes the software. - Daniel J. Sorin",
