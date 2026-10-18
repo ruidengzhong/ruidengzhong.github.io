@@ -87,6 +87,11 @@ ninja.data = [{
           description: "Logisim, Digital Logic Design, Computer Architecture",
           section: "Projects",handler: () => {
               window.location.href = "/projects/mipsCPU/";
+            },},{id: "projects-rf-lora-module",
+          title: 'RF LORA Module',
+          description: "KiCad, PCB Assembly, Soldering",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/rfLora/";
             },},{id: "projects-strain-gauge-pcb",
           title: 'Strain Gauge PCB',
           description: "Altium, PCB Assembly, Soldering, MoTeC M1 Tune",
