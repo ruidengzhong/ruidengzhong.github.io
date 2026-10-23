@@ -34,7 +34,7 @@ social: true # includes social icons at the bottom of the page
 
 I’m Ruideng Zhong, an electrical and computer engineering student at [Duke University](https://www.duke.edu/) who’s passionate about developing, testing, and improving anything in both the physical and the theoretical worlds. I enjoy hands-on projects, learning new tools, and challenging myself to understand how things work from the inside out. Currently racing with [Duke Motorsports](https://www.dukefsae.com/), defending the planet with the [Duke SPACE Initiative](https://spaceinitiative.duke.edu/), and building the next big thing.
 
-Open to internship or research opportunities across all fields related to electrical and computer engineering - with a particular focus on computer architecture, and microelectronics.
+Open to internship or research opportunities across all fields related to electrical and computer engineering - with a particular focus on computer architecture and microelectronics.
 
 
 ## Out of the Classroom
