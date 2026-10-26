@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Custom Hytera Radio Harness
-description: KiCAD, Digital Multimeter, Crimping, Splicing
+description: Altium, Digital Multimeter, Crimping, Splicing
 img: assets/img/project1_radio.jpeg
 importance: 15
 #category: work

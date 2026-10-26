@@ -9,11 +9,12 @@ last_name: Zhong
 #contact_note: >
 #  You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Ruideng Zhong is an electrical and computer engineering student at Duke University,
+  with interests in computer architecture, microelectronics, and hands-on engineering.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: Ruideng Zhong, Duke University, electrical and computer engineering, computer architecture, microelectronics
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: rzlogo.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -120,24 +121,11 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: # unused; leave blank unless enabling Disqus
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
-# External sources.
-# If you have blog posts published on medium.com or other external sources,
-# you can display them in your blog by adding a link to the RSS feed.
-# Optional: Set default categories and tags for posts from each source.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-    categories: [external-posts]
-    tags: [medium]
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
-    categories: [external-posts]
-    tags: [google]
+# External blog imports are unused on this portfolio.
+external_sources: []
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -244,8 +232,23 @@ plugins:
   - jekyll-twitter-plugin
   - jemoji
 
-# Sitemap settings
+# Collection navigation and sitemap defaults
 defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      nav_parent: /projects/
+  - scope:
+      path: ""
+      type: experiences
+    values:
+      nav_parent: /experience/
+  - scope:
+      path: ""
+      type: teachings
+    values:
+      nav_parent: /teaching/
   - scope:
       path: "assets"
     values:
@@ -415,7 +418,7 @@ enable_openpanel_analytics: false # enables Openpanel analytics (https://openpan
 enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
 enable_cookie_consent: false # enables GDPR-compliant cookie consent dialog (https://github.com/orestbida/cookieconsent)
-enable_masonry: true # enables automatic project cards arrangement
+enable_masonry: false # project cards use the Bootstrap grid
 enable_math: true # enables math typesetting (uses MathJax)
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
 enable_darkmode: true # enables switching between light/dark modes

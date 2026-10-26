@@ -25,6 +25,16 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 }
 
+// Shared figures scale responsively; dimensions in HTML are numeric when available.
+.responsive-figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+.responsive-figure img:not([width]) {
+  width: 100%;
+}
+
 // Caption
 
 .caption {
@@ -63,7 +73,6 @@ ul.task-list input[type="checkbox"] {
     margin-top: 5px;
     font-family: Consolas;
     font-size: 0.93rem;
-
 
     p {
       display: inline-block;
@@ -127,6 +136,20 @@ ul.task-list input[type="checkbox"] {
 // Projects
 
 .projects {
+  .project-link {
+    color: inherit;
+  }
+
+  .project-repository-link {
+    position: relative;
+    z-index: 2;
+  }
+
+  .card:hover .card-title,
+  .project-link:focus-visible {
+    color: var(--global-theme-color);
+  }
+
   a {
     text-decoration: none;
 

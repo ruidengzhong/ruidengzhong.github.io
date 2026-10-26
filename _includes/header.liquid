@@ -98,8 +98,11 @@
                   </div>
                 </li>
               {% else %}
-                {% assign parent_link = p.permalink | remove: 'index.html' %}
-                <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
+                {% assign is_active = false %}
+                {% if page.url == p.url or page.nav_parent == p.permalink %}
+                  {% assign is_active = true %}
+                {% endif %}
+                <li class="nav-item {% if is_active %}active{% endif %}">
                   {%- if p.permalink contains '://' -%}
                     {%- assign url = p.permalink -%}
                   {%- elsif p.permalink contains '/blog/' -%}
@@ -107,9 +110,15 @@
                   {%- else -%}
                     {%- assign url = p.url -%}
                   {%- endif %}
-                  <a class="nav-link" href="{{ url | relative_url }}">
+                  <a
+                    class="nav-link"
+                    href="{{ url | relative_url }}"
+                    {% if is_active %}
+                      aria-current="page"
+                    {% endif %}
+                  >
                     {{- p.title }}
-                    {% if page.url contains p.url %}
+                    {% if is_active %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>

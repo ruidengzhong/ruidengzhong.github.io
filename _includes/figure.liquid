@@ -3,6 +3,7 @@
 {% assign ext = parts.last %}
 
 <figure
+  class="responsive-figure"
   {% if include.slot %}
     slot="{{ include.slot }}"
   {% endif %}
@@ -36,15 +37,13 @@
       {% if include.class %}
         class="{{ include.class }}"
       {% endif %}
-      {% if include.width %}
-        width="{{ include.width }}"
-      {% else %}
-        width="100%"
+      {% assign image_width = include.width | plus: 0 %}
+      {% assign image_height = include.height | plus: 0 %}
+      {% if image_width > 0 %}
+        {% unless include.width contains '%' %}width="{{ image_width }}"{% endunless %}
       {% endif %}
-      {% if include.height %}
-        height="{{ include.height }}"
-      {% else %}
-        height="auto"
+      {% if image_height > 0 %}
+        {% unless include.height contains '%' %}height="{{ image_height }}"{% endunless %}
       {% endif %}
       {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
         style="
@@ -62,8 +61,12 @@
           {% endif %}
         "
       {% endif %}
-      {% if include.alt %}
-        alt="{{ include.alt }}"
+      {% if include.alt != null %}
+        alt="{{ include.alt | escape }}"
+      {% elsif include.title != blank and include.title != 'example image' %}
+        alt="{{ include.title | escape }}"
+      {% else %}
+        alt="{{ page.title | escape }}"
       {% endif %}
       {% if include.title %}
         title="{{ include.title }}"
@@ -76,7 +79,7 @@
       {% elsif site.lazy_loading_images %}
         loading="lazy"
       {% endif %}
-      onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+      onerror="this.onerror=null; this.parentElement.querySelectorAll('source').forEach(function(source) { source.remove(); });"
     >
   </picture>
 
