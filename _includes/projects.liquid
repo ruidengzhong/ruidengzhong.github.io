@@ -11,6 +11,9 @@
       %}
     {% endif %}
     <div class="card-body">
+      {% if project.status %}
+        <p class="status-label">{{ project.status }}</p>
+      {% endif %}
       <h2 class="card-title">
         <a
           class="stretched-link project-link"

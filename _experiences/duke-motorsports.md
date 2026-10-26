@@ -6,29 +6,26 @@ location: Durham, North Carolina
 start_date: August 2025
 end_date: Present
 order: 1
-description: Designing, testing, and improving electrical systems for a student-built FSAE race car.
+description: "Electrical systems development and integration for a student-built Formula SAE car."
 image: /assets/img/motorsportsCar.jpg
 image_alt: Duke Motorsports car
+outcome: "Ongoing work spans vehicle wiring, PCB design, sensor testing, and electrical integration."
+contributions:
+  - "Design, fabricate, and test vehicle wiring harnesses."
+  - "Design PCBs for the brake system plausibility device, DC–DC converter, steering wheel, strain gauge, and light gates."
+  - "Test components and tune sensors and engine settings with MoTeC tools."
+tools:
+  - "Altium"
+  - "KiCad"
+  - "RapidHarness"
+  - "SolidWorks"
+  - "Onshape"
+  - "MoTeC"
 ---
 
-As a member of [Duke Motorsports](https://www.dukefsae.com/), I work on the electrical systems of a Formula SAE race car. My responsibilities include designing PCBs, testing components, tuning sensors and modules, fabricating wire harnesses, troubleshooting electrical issues, and collaborating with other team members and other subsystems to integrate the vehicle’s systems.
+## Work in context
 
-### Some of my work includes:
-
-- Designing, fabricating, and testing electrical harnesses
-- Designing PCBs for the Brake System Plausibility Device, DC-DC converter, Steering Wheel, Strain Gauge, and Light gates
-- Using digital multimeters and other testing equipment
-- Tuning the engine with MoTeC M1 Tune
-
-### Skills Developed:
-
-- PCB Design: Altium, KiCAD
-- Harness Design: RapidHarness
-- CAD: Solidworks, OnShape
-- Misc. Software: MoTeC M1 Tune, MoTeC C185 Dash Manager
-- Laboratory Equipment: Digital Multimeters, Soldering
-- Productivity: Microsoft 365 (Excel, PowerPoint, Word), Google Suite, Airtable, Trello
-
+As a member of [Duke Motorsports](https://www.dukefsae.com/), I collaborate with the electrical team and other subsystems to integrate the race car’s electronics. The work combines design and fabrication with practical troubleshooting and testing.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-6 mt-3 mt-md-0">

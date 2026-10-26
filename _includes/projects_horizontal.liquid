@@ -8,6 +8,9 @@
       {% endif %}
       <div class="{% if project.img %}col-md-6{% else %}col-md-12{% endif %}">
         <div class="card-body">
+          {% if project.status %}
+            <p class="status-label">{{ project.status }}</p>
+          {% endif %}
           <h3 class="card-title">
             <a
               class="stretched-link project-link"

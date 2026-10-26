@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A growing collection of my engineering projects, experiments, and technical explorations.
+description: Projects in electronics, computer architecture, embedded systems, and biomedical instrumentation.
 nav: true
 nav_order: 3
 #display_categories: [work, fun]

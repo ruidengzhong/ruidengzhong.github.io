@@ -14,11 +14,11 @@ profile:
     Major: ECE<br>
     Minor: Economics<br>
     Expected Graduation: May 2029<br>
-    Languages: English·Chinese·German
-
+    Languages: English · Chinese · German
 
 #selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
+
 
 #announcements:
 #  enabled: true # includes a list of news items
@@ -30,17 +30,16 @@ social: true # includes social icons at the bottom of the page
 #  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
 #  limit: 3 # leave blank to include all the blog posts
 ---
+
 ## Student. Engineer. Problem Solver.
 
-I’m Ruideng Zhong, an electrical and computer engineering student at [Duke University](https://www.duke.edu/) who’s passionate about developing, testing, and improving anything in both the physical and the theoretical worlds. I enjoy hands-on projects, learning new tools, and challenging myself to understand how things work from the inside out. Currently racing with [Duke Motorsports](https://www.dukefsae.com/), defending the planet with the [Duke SPACE Initiative](https://spaceinitiative.duke.edu/), and building the next big thing.
+I’m Ruideng Zhong, an electrical and computer engineering student at [Duke University](https://www.duke.edu/) interested in computer architecture, microelectronics, and hands-on engineering. Through [Duke Motorsports](https://www.dukefsae.com/) and the [Duke SPACE Initiative](https://spaceinitiative.duke.edu/), I work on projects that connect design, fabrication, and testing.
 
-Open to internship or research opportunities across all fields related to electrical and computer engineering - with a particular focus on computer architecture and microelectronics.
-
+I’m open to internship and research opportunities where I can contribute to electrical and computer engineering projects.
 
 ## Out of the Classroom
 
-Outside of my engineering work, I am your typical college student living out the college dream. As a clarinet player and treasurer in the [Duke Marching Band](https://www.dukeband.org/), I get to support our football and basketball teams while enjoying my love of making music. In my spare time, I enjoy running, hiking, playing both the clarinet and the piano, designing builds in Minecraft, playing spikeball and frisbee, and cheering on Tottenham Hotspur (COYS!), Duke athletics, and McLaren F1 Team!
-
+I play clarinet and serve as treasurer in the [Duke Marching Band](https://www.dukeband.org/). Outside engineering and music, I enjoy running, hiking, piano, Minecraft, spikeball, and frisbee. I also follow Tottenham Hotspur, Duke athletics, and McLaren F1.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-6 mt-3 mt-md-0">

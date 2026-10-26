@@ -2,25 +2,22 @@
 layout: page
 title: Work Experience
 permalink: /experience/
-description: A collection of my professional, technical, and extracurricular experience.
+description: Engineering, research, and quality experience in automotive systems, electronics, and materials.
 nav: true
 nav_order: 4
 ---
 
-<p>
-  A collection of my work, research, leadership, and engineering experiences.
-</p>
-
 <div class="experiences-list">
   {% assign sorted_experiences = site.experiences | sort: "order" %}
 
-  {% for experience in sorted_experiences %}
-    <article class="experience-entry">
-      <h2>
-        <a href="{{ experience.url | relative_url }}">
-          {{ experience.title }}
-        </a>
-      </h2>
+{% for experience in sorted_experiences %}
+
+<article class="experience-entry">
+<h2>
+<a href="{{ experience.url | relative_url }}">
+{{ experience.title }}
+</a>
+</h2>
 
       {% if experience.company %}
         <p class="experience-company">
@@ -41,12 +38,14 @@ nav_order: 4
       {% endif %}
 
       {% if experience.description %}
-        <p>{{ experience.description }}</p>
+        <p class="experience-summary">{{ experience.description }}</p>
       {% endif %}
 
-      <a href="{{ experience.url | relative_url }}">
-        Read more
+      <a class="experience-more" href="{{ experience.url | relative_url }}" aria-label="View {{ experience.title }} at {{ experience.company }}">
+        View experience
       </a>
     </article>
-  {% endfor %}
+
+{% endfor %}
+
 </div>
