@@ -11,14 +11,14 @@ ninja.data = [{
     },
   },{id: "nav-projects",
           title: "Projects",
-          description: "A growing collection of my engineering projects, experiments, and technical explorations.",
+          description: "Projects in electronics, computer architecture, embedded systems, and biomedical instrumentation.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-work-experience",
           title: "Work Experience",
-          description: "A collection of my professional, technical, and extracurricular experience.",
+          description: "Engineering, research, and quality experience in automotive systems, electronics, and materials.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/experience/";
@@ -32,79 +32,79 @@ ninja.data = [{
           },
         },{id: "nav-teaching",
           title: "Teaching",
-          description: "Course materials, schedules, and resources for classes taught.",
+          description: "Undergraduate teaching support in computer architecture at Duke University.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
           },
         },{id: "experiences-lab-aide",
           title: 'Lab Aide',
-          description: "Assisted in lab operations at the Advanced Materials Research Laboratory",
+          description: "3D-printing workflows and materials research for biomedical fabrication.",
           section: "Experiences",handler: () => {
               window.location.href = "/experiences/clemsonece/";
             },},{id: "experiences-research-intern",
           title: 'Research Intern',
-          description: "Researched molecular behavior of C₆₀ fullerene using LAAMPS",
+          description: "Molecular dynamics research on C₆₀ fullerene structures under compression.",
           section: "Experiences",handler: () => {
               window.location.href = "/experiences/clemsonmeche/";
             },},{id: "experiences-electrical-systems-engineer",
           title: 'Electrical Systems Engineer',
-          description: "Designing, testing, and improving electrical systems for a student-built FSAE race car.",
+          description: "Electrical systems development and integration for a student-built Formula SAE car.",
           section: "Experiences",handler: () => {
               window.location.href = "/experiences/duke-motorsports/";
             },},{id: "experiences-quality-engineering-intern",
           title: 'Quality Engineering Intern',
-          description: "Supported the quality engineering department at EEEA Inc.",
+          description: "Quality systems, inspection, and process improvement in electronics manufacturing.",
           section: "Experiences",handler: () => {
               window.location.href = "/experiences/eeea/";
-            },},{id: "projects-hardware-acceleration-on-a-xilinx-zynq-7020-fpga",
-          title: 'Hardware Acceleration on a Xilinx Zynq-7020 FPGA',
-          description: "FPGA, Vivado, Verilog",
+            },},{id: "projects-fpga-image-acceleration",
+          title: 'FPGA Image Acceleration',
+          description: "Pipelined Sobel edge detection on a Xilinx Zynq-7020 FPGA.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/FPGAAcceleration/";
-            },},{id: "projects-12v-7v-buck-converter-with-smart-high-side-switch",
-          title: '12V-7V Buck Converter with Smart High Side Switch',
-          description: "Altium, PCB Assembly, Soldering",
+            },},{id: "projects-12-v-7-v-buck-converter",
+          title: '12 V–7 V Buck Converter',
+          description: "A step-down converter with a smart high-side switch for an FSAE clutch servo.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/buckConverter/";
             },},{id: "projects-doppler-string-phantom",
           title: 'Doppler String Phantom',
-          description: "Python, Arduino, OnShape, 3D Printing, Ultrasound, Digital Multimeter",
+          description: "An adjustable, low-cost platform for Doppler ultrasound experiments.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/dopplerStringPhantom/";
-            },},{id: "projects-line-tracking-bot-with-thermal-sensor",
-          title: 'Line-Tracking Bot with Thermal Sensor',
-          description: "Arduino Mega, IR Sensor, QTI Sensor, LCD, Breadboarding",
+            },},{id: "projects-thermal-sensing-robot",
+          title: 'Thermal-Sensing Robot',
+          description: "An Arduino robot combining line following, thermal sensing, and wireless data exchange.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ece110Bot/";
-            },},{id: "projects-custom-hytera-radio-harness",
-          title: 'Custom Hytera Radio Harness',
-          description: "KiCAD, Digital Multimeter, Crimping, Splicing",
+            },},{id: "projects-hytera-radio-harness",
+          title: 'Hytera Radio Harness',
+          description: "Serviceable race-car wiring connecting the driver’s headset, radio, and steering-wheel button.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/hyteraRadio/";
-            },},{id: "projects-gate-level-16-bit-mips-style-cpu",
-          title: 'Gate-Level 16-Bit MIPS-Style CPU',
-          description: "Logisim, Digital Logic Design, Computer Architecture",
+            },},{id: "projects-16-bit-mips-style-cpu",
+          title: '16-Bit MIPS-Style CPU',
+          description: "A programmable processor built from custom gate-level components in Logisim.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/mipsCPU/";
             },},{id: "projects-rf-lora-module",
-          title: 'RF LORA Module',
-          description: "KiCad, PCB Assembly, Soldering",
+          title: 'RF LoRa Module',
+          description: "Low-power, long-range wireless communication for a ChipSat module.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rfLora/";
             },},{id: "projects-strain-gauge-pcb",
           title: 'Strain Gauge PCB',
-          description: "Altium, PCB Assembly, Soldering, MoTeC M1 Tune",
+          description: "An instrumentation-amplifier board for conditioning small strain-gauge signals.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/strainGauge/";
             },},{id: "projects-fsae-wiring-harness",
           title: 'FSAE Wiring Harness',
-          description: "RapidHarness, Altium, SolidWorks, Wiring Harness Fabrication",
+          description: "Electrical harness development for the 2026–2027 Duke Motorsports car.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/wireHarness2027/";
             },},{id: "teachings-ece-cs-250-computer-architecture",
           title: 'ECE/CS 250 - Computer Architecture',
-          description: "The objective of this course is to learn how computers work, focusing on how the computer hardware executes the software. - Daniel J. Sorin",
+          description: "Undergraduate teaching assistant for ECE/CS 250, covering how computer hardware executes software.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/computer-architecture/";
             },},{
