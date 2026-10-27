@@ -21,8 +21,7 @@ cv:
         start_date: Aug 2025
         end_date: May 2029
         score: ""
-        courses: 
-        
+        courses:
           - Microelectronics
           - Signals and Systems
           - Computer Architecture
@@ -31,7 +30,7 @@ cv:
           - Introductory Electricity, Magnetism, and Optics
         highlights: Cumulative GPA - 4.0, Major GPA - 4.0
 
-    Experience:      
+    Experience:
       - company: Duke Motorsports (FSAE)
         position: Electrical Systems Engineer
         location: Durham, NC
@@ -56,9 +55,9 @@ cv:
         location: Simpsonville, SC
         start_date: May 2026
         end_date: Aug 2026
-        summary: 
+        summary:
         highlights:
-          - Achieved 98% accuracy in classifying assembled PCBs according to IPC-A-610 criteria.  
+          - Achieved 98% accuracy in classifying assembled PCBs according to IPC-A-610 criteria.
           - Led procedure documentation efforts in a push to achieve AS9100 certifications.
           - Reduced AOI false-positive rate by 24% through custom programming and setup.
 
@@ -72,7 +71,7 @@ cv:
           - Optimized material selection for enhanced durability of the 3D printed denture model.
           - Conducted a literature review on filament properties for scaffold fabrication and organized data into a database.
 
-      - company: Clemson University Department of Mechanical Engineering 
+      - company: Clemson University Department of Mechanical Engineering
         position: Research Intern
         location: Clemson, SC
         start_date: Aug 2023
@@ -102,6 +101,6 @@ cv:
 
       - name: Chinese
         summary: "Native speaker"
-      
+
       - name: German
         summary: "Professional Working Proficiency"
