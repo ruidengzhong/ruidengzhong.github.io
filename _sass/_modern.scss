@@ -1,0 +1,276 @@
+// Shared Modern Minimal treatment; page layouts and content stay independent.
+:root {
+  --global-bg-color: #fafbfc;
+  --global-text-color: #17212e;
+  --global-text-color-light: #526072;
+  --global-theme-color: #005bb5;
+  --global-hover-color: #005bb5;
+  --global-divider-color: #dce3ea;
+  --global-card-bg-color: #eef3f8;
+  --global-footer-bg-color: #fafbfc;
+  --global-footer-text-color: #526072;
+  --global-footer-link-color: #005bb5;
+}
+
+html[data-theme="dark"] {
+  --global-bg-color: #11151b;
+  --global-text-color: #edf2f7;
+  --global-text-color-light: #b1becb;
+  --global-theme-color: #7eb7ff;
+  --global-hover-color: #7eb7ff;
+  --global-divider-color: #35404e;
+  --global-card-bg-color: #1e2935;
+  --global-footer-bg-color: #11151b;
+  --global-footer-text-color: #b1becb;
+  --global-footer-link-color: #7eb7ff;
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+
+.site-content {
+  position: relative;
+  z-index: 1;
+}
+
+.post-header {
+  margin-bottom: 2.5rem;
+  .post-title {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 1.15;
+    strong {
+      font-weight: 700;
+    }
+  }
+  .post-description {
+    color: var(--global-text-color-light);
+    opacity: 1;
+    margin-top: 1rem;
+  }
+}
+
+.navbar {
+  opacity: 1;
+  box-shadow: none;
+  .navbar-brand {
+    font-size: 1.1rem;
+    letter-spacing: -0.025em;
+  }
+  .navbar-nav .nav-item .nav-link {
+    font-size: 0.88rem;
+    font-weight: 500;
+  }
+}
+
+.projects .card,
+.cv .card,
+.course-item {
+  border-radius: 12px;
+  box-shadow: none;
+  background: var(--global-card-bg-color);
+}
+
+.projects .card .card-body,
+.course-item {
+  padding: 1.5rem;
+}
+.projects .card .card-title,
+.course-item h3,
+.experience-entry h2,
+.portfolio-detail h2,
+.portfolio-detail h3,
+.about-page .clearfix h2,
+.cv .card-title {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.projects .card .card-text,
+.experience-meta,
+.detail-meta {
+  color: var(--global-text-color-light);
+}
+
+.skill-tags span,
+.status-label {
+  border-radius: 6px;
+}
+.portfolio-detail .outcome-panel {
+  border-radius: 10px;
+  background: var(--global-card-bg-color);
+}
+.profile img {
+  border-radius: 12px;
+}
+.experience-entry {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+a {
+  text-underline-offset: 0.2em;
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 4px;
+}
+
+footer.fixed-bottom,
+footer.sticky-bottom {
+  background: var(--global-footer-bg-color);
+  border-top: 1px solid var(--global-divider-color);
+  .container {
+    color: var(--global-footer-text-color);
+  }
+}
+
+.motion-toggle {
+  background: transparent;
+  border: 0;
+  padding: 0.15rem 0.35rem;
+  margin-left: 0.5rem;
+  color: var(--global-footer-link-color);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+  &[hidden] {
+    display: none;
+  }
+  &:disabled {
+    color: var(--global-footer-text-color);
+    text-decoration: none;
+    cursor: default;
+  }
+}
+
+// A single quiet rail sits in the space above page content.
+.ambient-line {
+  position: absolute;
+  top: 82px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  pointer-events: none;
+  overflow: clip;
+  overflow-clip-margin: 12px;
+  background: linear-gradient(90deg, transparent, var(--global-divider-color), transparent);
+  span {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--global-theme-color);
+    box-shadow: 0 0 10px 2px var(--global-theme-color);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ambient-line span {
+    animation: ambient-travel 18s linear infinite;
+    animation-play-state: paused;
+  }
+  html[data-motion="on"] .ambient-line span {
+    animation-play-state: running;
+  }
+  .post-header {
+    animation: minimal-enter 550ms ease-out both;
+  }
+  .projects .card,
+  .course-item {
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease;
+  }
+  @media (hover: hover) {
+    .projects .card:hover,
+    .course-item:hover {
+      transform: translateY(-3px);
+      border-color: var(--global-theme-color);
+    }
+  }
+  a.section-back {
+    display: inline-block;
+    transition: transform 180ms ease;
+  }
+  a.section-back:hover {
+    transform: translateX(-3px);
+  }
+}
+
+@keyframes ambient-travel {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.6;
+  }
+  92% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(calc(100vw - 6px));
+    opacity: 0;
+  }
+}
+
+@keyframes minimal-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 575px) {
+  body {
+    padding-bottom: 100px;
+  }
+  .post-header {
+    margin-bottom: 2rem;
+  }
+  .motion-toggle {
+    display: inline-block;
+  }
+}
+
+@media print {
+  .ambient-line,
+  .motion-toggle {
+    display: none !important;
+  }
+  .post-header {
+    animation: none;
+  }
+}

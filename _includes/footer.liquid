@@ -9,6 +9,7 @@
   {% if site.last_updated %}
     Last updated: {{ 'now' | date: '%B %d, %Y' }}.
   {% endif %}
+  <button type="button" class="motion-toggle" hidden aria-pressed="false">Pause animation</button>
 {% endcapture %}
 
 {% if site.footer_fixed %}
