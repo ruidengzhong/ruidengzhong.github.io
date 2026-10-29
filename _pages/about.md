@@ -2,7 +2,14 @@
 layout: about
 title: About Me
 permalink: /
-#subtitle: Student. Engineer. Problem Solver.
+home_hero: true
+hero_affiliation: "Duke University · Class of ’29"
+hero_tagline: "Electrical & Computer Engineering"
+# Add a landscape photo here, for example: /assets/img/engineering.jpg
+# The image appears directly beneath the Student / Engineer / Problem Solver heading.
+engineering_image: ""
+engineering_image_alt: ""
+engineering_image_caption: ""
 
 profile:
   align: right
@@ -31,24 +38,57 @@ social: true # includes social icons at the bottom of the page
 #  limit: 3 # leave blank to include all the blog posts
 ---
 
-## Student. Engineer. Problem Solver.
+<section class="home-section" id="student-engineer" aria-labelledby="student-engineer-title">
+<div class="home-section-inner">
+<p class="home-eyebrow">About me</p>
+<div class="home-story-grid">
+<div class="home-story-heading">
+<h2 id="student-engineer-title">Student.<br>Engineer.<br>Problem Solver.</h2>
+{% if page.engineering_image != blank %}
+<div class="home-engineering-photo">
+{% include figure.liquid path=page.engineering_image alt=page.engineering_image_alt class="home-landscape-image" sizes="(min-width: 900px) 420px, 90vw" %}
+{% if page.engineering_image_caption != blank %}
+<p class="caption">{{ page.engineering_image_caption | escape }}</p>
+{% endif %}
+</div>
+{% endif %}
+</div>
+<div class="home-story-copy" markdown="1">
 
 I’m Ruideng Zhong, an electrical and computer engineering student at [Duke University](https://www.duke.edu/) interested in computer architecture, microelectronics, and hands-on engineering. Through [Duke Motorsports](https://www.dukefsae.com/) and the [Duke SPACE Initiative](https://spaceinitiative.duke.edu/), I work on projects that connect design, fabrication, and testing.
 
 I’m open to internship and research opportunities where I can contribute to electrical and computer engineering projects.
 
-## Out of the Classroom
+</div>
+</div>
+{% if page.profile.more_info %}
+<div class="home-facts">{{ page.profile.more_info }}</div>
+{% endif %}
+</div>
+</section>
+
+<section class="home-section home-outside" aria-labelledby="outside-title">
+<div class="home-section-inner">
+<p class="home-eyebrow">Beyond engineering</p>
+<div class="home-story-grid">
+<h2 id="outside-title">Out of the<br>Classroom</h2>
+<div class="home-story-copy" markdown="1">
 
 I play clarinet and serve as treasurer in the [Duke Marching Band](https://www.dukeband.org/). Outside engineering and music, I enjoy running, hiking, piano, Minecraft, spikeball, and frisbee. I also follow Tottenham Hotspur, Duke athletics, and McLaren F1.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-6 mt-3 mt-md-0">
+</div>
+</div>
+<div class="home-team-photos">
+    <div>
         {% include figure.liquid path="assets/img/dumb.jpg" title="Duke Marching Band at Cameron Indoor" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-6 mt-3 mt-md-0">
+    <div>
         {% include figure.liquid path="assets/img/motorsports.jpg" title="Duke Motorsports at Michigan International Speedway" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
     Some of the teams that shape me as a person.
 </div>
+
+</div>
+</section>

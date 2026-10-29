@@ -1,0 +1,309 @@
+// Portrait Feature homepage. All layout changes are scoped to the homepage.
+.home-content.container {
+  max-width: none;
+  padding: 0;
+  margin-top: 0 !important;
+}
+
+.home-page {
+  --home-blue-block: #e8f0fa;
+  .home-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: calc(100svh - 57px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 32px 95px;
+  }
+  .home-blocks {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .home-block-track {
+    position: absolute;
+    inset: 0 auto 0 -100%;
+    width: 300%;
+    // Skew the entire striped surface so both edges of each block stay parallel.
+    // The parent translates by one tile for a seamless loop.
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(90deg, var(--global-bg-color) 55%, var(--home-blue-block) 55%);
+      background-size: calc(100% / 3) 100%;
+      background-repeat: repeat-x;
+      transform: skewX(-20deg);
+    }
+  }
+  .home-hero-inner {
+    width: 100%;
+    max-width: 1040px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(32px, 5vw, 72px);
+    align-items: center;
+  }
+  .home-portrait figure {
+    margin: 0;
+  }
+  .home-portrait-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 0.95;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 90px 18px 18px 18px;
+  }
+  .home-eyebrow {
+    color: var(--global-theme-color);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-size: clamp(3.4rem, 6.5vw, 5.5rem);
+    line-height: 1.04;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .home-tagline {
+    font-size: clamp(0.8rem, 3.5vw, 1.1rem);
+    white-space: nowrap;
+    color: var(--global-text-color-light);
+    margin: 0;
+  }
+  .home-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  .home-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 16px;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+    span {
+      color: inherit;
+    }
+    &:hover {
+      border-color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+  .home-action-primary {
+    background: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    color: var(--global-bg-color);
+    &:hover {
+      color: var(--global-bg-color);
+    }
+  }
+  .home-scroll {
+    display: block;
+    width: 100%;
+    max-width: 1040px;
+    margin: 44px auto 0;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    span {
+      margin-left: 8px;
+      color: inherit;
+    }
+  }
+  .home-section {
+    padding: 100px 32px;
+    border-top: 1px solid var(--global-divider-color);
+  }
+  .home-section-inner {
+    max-width: 1040px;
+    margin: auto;
+  }
+  .home-story-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(32px, 5vw, 72px);
+  }
+  .home-section h2 {
+    font-size: clamp(2rem, 3.8vw, 3rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    margin: 0 0 28px;
+  }
+  .home-story-copy {
+    color: var(--global-text-color-light);
+  }
+  .home-story-copy p {
+    color: inherit;
+    line-height: 1.8;
+  }
+  .home-story-copy p:last-child {
+    margin-bottom: 0;
+  }
+  .home-engineering-photo {
+    margin-top: 32px;
+  }
+  .home-landscape-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+  .home-facts {
+    margin-top: 40px;
+    color: var(--global-text-color-light);
+    font-size: 0.875rem;
+  }
+  .home-outside {
+    background: var(--global-card-bg-color);
+  }
+  .home-team-photos {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+    img {
+      width: 100%;
+      aspect-ratio: 1.7;
+      object-fit: cover;
+      box-shadow: none !important;
+    }
+  }
+  .social {
+    padding: 50px 24px 20px;
+  }
+}
+
+html[data-theme="dark"] .home-page {
+  --home-blue-block: #182a40;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-block-track {
+    animation: home-block-drift 42s linear infinite;
+    animation-play-state: paused;
+  }
+  html[data-motion="on"] .home-block-track {
+    animation-play-state: running;
+  }
+  .home-introduction {
+    animation: minimal-enter 550ms ease-out both;
+  }
+  .home-action {
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease;
+  }
+  .home-action:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes home-block-drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(100% / 3));
+  }
+}
+
+@media (max-width: 899px) {
+  .home-page {
+    .home-hero {
+      padding: 50px 24px 95px;
+    }
+    .home-hero-inner {
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: 28px;
+    }
+    .home-actions {
+      gap: 8px;
+    }
+    .home-action {
+      padding: 10px 12px;
+      font-size: 0.8rem;
+    }
+    .home-tagline {
+      font-size: clamp(0.8rem, 2vw, 1rem);
+    }
+  }
+}
+
+@media (max-width: 649px) {
+  .home-page {
+    .home-hero {
+      padding: 36px 20px 100px;
+    }
+    .home-hero-inner {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 30px;
+    }
+    .home-portrait {
+      width: min(100%, 330px);
+    }
+    .home-portrait-image {
+      aspect-ratio: 1.5;
+      border-radius: 60px 14px 14px 14px;
+    }
+    .home-eyebrow {
+      margin-bottom: 16px;
+      font-size: 0.7rem;
+    }
+    h1 {
+      font-size: 3.4rem;
+    }
+    .home-tagline {
+      font-size: clamp(0.8rem, 3.5vw, 1.1rem);
+    }
+    .home-scroll {
+      margin-top: 36px;
+    }
+    .home-section {
+      padding: 64px 20px;
+    }
+    .home-story-grid,
+    .home-team-photos {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 24px;
+    }
+    .home-section h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media print {
+  .home-page {
+    .home-blocks,
+    .home-scroll {
+      display: none;
+    }
+    .home-hero {
+      min-height: 0;
+      padding: 30px;
+    }
+    .home-section {
+      padding: 30px;
+    }
+    .home-introduction {
+      animation: none;
+    }
+  }
+}

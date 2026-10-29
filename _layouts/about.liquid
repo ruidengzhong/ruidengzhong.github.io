@@ -1,47 +1,37 @@
 ---
 layout: default
 ---
-<div class="post about-page">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
+<div class="post about-page home-page">
+  <header class="home-hero" aria-labelledby="home-name">
+    <div class="home-blocks" aria-hidden="true"><div class="home-block-track"></div></div>
+    <div class="home-hero-inner">
+      {% if page.profile.image %}
+        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        {% assign profile_alt = site.first_name | append: ' ' | append: site.last_name %}
+        <div class="home-portrait">
+          {% include figure.liquid loading="eager" path=profile_image_path class="home-portrait-image" sizes="(min-width: 900px) 420px, (min-width: 600px) 50vw, 85vw" alt=profile_alt cache_bust=true %}
+        </div>
       {% endif %}
-    </h1>
-    {% if page.subtitle %}
-      <p class="post-description">{{ page.subtitle }}</p>
-    {% endif %}
+      <div class="home-introduction">
+        <p class="home-eyebrow">{{ page.hero_affiliation | escape }}</p>
+        <h1 id="home-name">
+          {{ site.first_name -}}
+          <br>
+          {{ site.last_name }}
+        </h1>
+        <p class="home-tagline">{{ page.hero_tagline | escape }}</p>
+        <nav class="home-actions" aria-label="Explore my work">
+          <a class="home-action home-action-primary" href="{{ '/projects/' | relative_url }}">Projects <span aria-hidden="true">↗</span></a>
+          <a class="home-action" href="{{ '/experience/' | relative_url }}">Work experience <span aria-hidden="true">↗</span></a>
+          <a class="home-action" href="mailto:{{ site.data.socials.email }}">Contact <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </div>
+    <a class="home-scroll" href="#student-engineer">The person behind the projects <span aria-hidden="true">↓</span></a>
   </header>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% assign profile_alt = site.first_name | append: ' ' | append: site.last_name %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_alt
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
-
-    <div class="clearfix">{{ content }}</div>
+  <article class="home-story-content">
+    {{ content }}
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}

@@ -17,13 +17,15 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    <div class="ambient-line" aria-hidden="true"><span></span></div>
+    {% unless page.home_hero %}
+      <div class="ambient-line" aria-hidden="true"><span></span></div>
+    {% endunless %}
 
     <!-- Header -->
     {% include header.liquid %}
 
     <!-- Content -->
-    <div class="container mt-5 site-content" role="main">
+    <div class="container mt-5 site-content{% if page.home_hero %} home-content{% endif %}" role="main">
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
