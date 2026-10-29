@@ -5,10 +5,9 @@ permalink: /
 home_hero: true
 hero_affiliation: "Duke University · Expected Graduation in May 2029"
 hero_tagline: "Electrical & Computer Engineering"
-Add a landscape photo here, for example: /assets/img/inCar.jpg
-# The image appears directly beneath the Student / Engineer / Problem Solver heading.
-engineering_image: ""
-engineering_image_alt: ""
+# Change engineering_image below to replace the landscape photo beneath the heading.
+engineering_image: "/assets/img/inCar.jpg"
+engineering_image_alt: "Seated in the Duke Motorsports race car."
 engineering_image_caption: ""
 
 profile:
@@ -16,12 +15,12 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   #more_info: >
-   # Duke University<br>
-   # Durham, NC and Clemson, SC<br>
-   # Major: ECE<br>
-   # Minor: Economics<br>
-   # Expected Graduation: May 2029<br>
-   # Languages: English · Chinese · German
+  # Duke University<br>
+  # Durham, NC and Clemson, SC<br>
+  # Major: ECE<br>
+  # Minor: Economics<br>
+  # Expected Graduation: May 2029<br>
+  # Languages: English · Chinese · German
 
 #selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
