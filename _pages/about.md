@@ -5,7 +5,7 @@ permalink: /
 home_hero: true
 hero_affiliation: "Duke University · Class of ’29"
 hero_tagline: "Electrical & Computer Engineering"
-# Add a landscape photo here, for example: /assets/img/engineering.jpg
+Add a landscape photo here, for example: /assets/img/inCar.JPG
 # The image appears directly beneath the Student / Engineer / Problem Solver heading.
 engineering_image: ""
 engineering_image_alt: ""
@@ -57,7 +57,7 @@ social: true # includes social icons at the bottom of the page
 
 I’m Ruideng Zhong, an electrical and computer engineering student at [Duke University](https://www.duke.edu/) interested in computer architecture, microelectronics, and hands-on engineering. Through [Duke Motorsports](https://www.dukefsae.com/) and the [Duke SPACE Initiative](https://spaceinitiative.duke.edu/), I work on projects that connect design, fabrication, and testing.
 
-I’m open to internship and research opportunities where I can contribute to electrical and computer engineering projects.
+I’m open to internship and research opportunities in any location where I can contribute to electrical and computer engineering projects.
 
 </div>
 </div>
