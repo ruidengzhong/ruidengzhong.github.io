@@ -6,7 +6,7 @@ home_hero: true
 hero_affiliation: "Duke University · Expected Graduation in May 2029"
 hero_tagline: "Electrical & Computer Engineering"
 # Change engineering_image below to replace the landscape photo beneath the heading.
-engineering_image: "/assets/img/inCar.JPG"
+engineering_image: "/assets/img/inCar.png"
 engineering_image_alt: "Seated in the Duke Motorsports race car."
 engineering_image_caption: ""
 
