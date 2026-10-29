@@ -1,0 +1,209 @@
+.experience-page {
+  --experience-stripe: #e8f0fa;
+  .experience-header {
+    position: relative;
+    isolation: isolate;
+    padding: 32px 24px 44px;
+    margin: -16px -24px 16px;
+  }
+  .experience-stripes {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .experience-stripe-track {
+    position: absolute;
+    inset: 0 auto 0 -100%;
+    width: 300%;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, var(--global-bg-color) 55%, var(--experience-stripe) 55%);
+      background-size: calc(100% / 3) 100%;
+      transform: skewX(-20deg);
+    }
+  }
+  .experience-eyebrow {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--global-theme-color);
+  }
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    letter-spacing: -0.045em;
+    font-weight: 600;
+  }
+  .experience-intro {
+    max-width: 620px;
+    color: var(--global-text-color-light);
+    margin: 20px 0;
+  }
+  .experience-cv {
+    display: inline-flex;
+    gap: 10px;
+    border: 1px solid var(--global-divider-color);
+    padding: 9px 15px;
+    border-radius: 8px;
+    background: var(--global-bg-color);
+    font-size: 0.875rem;
+  }
+  .experience-cv span,
+  .timeline-more span {
+    color: inherit;
+  }
+  .timeline-entry {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 30px;
+  }
+  .timeline-meta {
+    padding: 32px 0;
+  }
+  .timeline-dates {
+    color: var(--global-text-color-light);
+    font-size: 0.8rem;
+    margin: 0 0 18px;
+  }
+  // Logos share a fixed canvas and retain their original proportions.
+  .timeline-logo {
+    width: 160px;
+    height: 88px;
+    padding: 12px;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    background: #fff;
+  }
+  .timeline-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .timeline-body {
+    position: relative;
+    border-left: 1px solid var(--global-divider-color);
+    padding: 28px 0 40px 32px;
+  }
+  .timeline-body::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 37px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--global-theme-color);
+  }
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+  h2 a {
+    color: var(--global-text-color);
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+  .timeline-current {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 3px 9px;
+    border-radius: 5px;
+    color: var(--global-theme-color);
+    background: var(--global-card-bg-color);
+    font-size: 0.75rem;
+  }
+  .timeline-company {
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+  }
+  .timeline-summary {
+    color: var(--global-text-color-light);
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+  .timeline-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+  }
+}
+html[data-theme="dark"] .experience-page {
+  --experience-stripe: #182a40;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .experience-stripe-track {
+    animation: home-block-drift 42s linear infinite;
+    animation-play-state: paused;
+  }
+  html[data-motion="on"] .experience-stripe-track {
+    animation-play-state: running;
+  }
+  .timeline-entry {
+    transition:
+      opacity 650ms ease,
+      transform 650ms ease;
+  }
+  .timeline-entry.reveal-pending {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  .timeline-more span {
+    transition: transform 180ms ease;
+  }
+  .timeline-more:hover span {
+    transform: translateX(4px);
+  }
+}
+@media (max-width: 650px) {
+  .experience-page {
+    .experience-header {
+      margin: -16px 0 12px;
+      padding: 24px 0 32px;
+    }
+    .timeline-entry {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
+      border-left: 1px solid var(--global-divider-color);
+      padding-left: 24px;
+    }
+    .timeline-meta {
+      padding: 24px 0 0;
+    }
+    .timeline-dates {
+      margin-bottom: 14px;
+    }
+    .timeline-body {
+      border: 0;
+      padding: 20px 0 32px;
+    }
+    .timeline-body::before {
+      left: -29px;
+      top: 28px;
+    }
+    .timeline-logo {
+      width: 160px;
+      height: 88px;
+    }
+  }
+}
+@media print {
+  .experience-stripes {
+    display: none;
+  }
+  .timeline-entry.reveal-pending {
+    opacity: 1;
+    transform: none;
+  }
+  .timeline-entry {
+    break-inside: avoid;
+  }
+}

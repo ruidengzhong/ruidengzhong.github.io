@@ -17,7 +17,7 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    {% unless page.home_hero %}
+    {% unless page.home_hero or page.experience_timeline %}
       <div class="ambient-line" aria-hidden="true"><span></span></div>
     {% endunless %}
 

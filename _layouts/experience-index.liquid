@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<div class="experience-page">
+  <header class="experience-header">
+    <div class="experience-stripes" aria-hidden="true"><div class="experience-stripe-track"></div></div>
+    <p class="experience-eyebrow">Engineering · Research · Quality</p>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="experience-intro">{{ page.description | escape }}</p>
+    <a class="experience-cv" href="{{ '/cv/' | relative_url }}">View my CV <span aria-hidden="true">↗</span></a>
+  </header>
+  {{ content }}
+  <div class="experience-timeline">
+    {% assign sorted_experiences = site.experiences | sort: 'order' %}
+    {% for experience in sorted_experiences %}
+      <article class="timeline-entry">
+        <div class="timeline-meta">
+          <p class="timeline-dates">{{ experience.start_date | escape }} – {{ experience.end_date | default: 'Present' | escape }}</p>
+          {% if experience.logo != blank and experience.logo %}
+            <div class="timeline-logo">
+              <img src="{{ experience.logo | relative_url }}" alt="{{ experience.company | escape }} logo" width="160" height="88" loading="lazy">
+            </div>
+          {% endif %}
+        </div>
+        <div class="timeline-body">
+          {% if experience.end_date == 'Present' or experience.end_date == null %}
+            <span class="timeline-current">Current role</span>
+          {% endif %}
+          <h2>
+            <a href="{{ experience.url | relative_url }}">{{ experience.title | escape }}</a>
+          </h2>
+          <p class="timeline-company">{{ experience.company | escape }}</p>
+          <p class="timeline-summary">{{ experience.description | escape }}</p>
+          <a
+            class="timeline-more"
+            href="{{ experience.url | relative_url }}"
+            aria-label="Explore {{ experience.title | escape }} at {{ experience.company | escape }}"
+          >
+            Explore experience <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>

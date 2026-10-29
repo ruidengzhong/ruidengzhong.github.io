@@ -1,6 +1,8 @@
 ---
 layout: experience
 title: Lab Aide
+# Optional company logo path, for example: /assets/img/company-logo.png
+logo: "/assets/img/clemsonECE.png"
 company: Clemson University Department of Electrical and Computer Engineering
 location: Clemson, South Carolina and Anderson, South Carolina
 start_date: August 2023

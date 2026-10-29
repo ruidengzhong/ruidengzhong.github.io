@@ -1,6 +1,8 @@
 ---
 layout: experience
 title: Research Intern
+# Optional company logo path, for example: /assets/img/company-logo.png
+logo: "/assets/img/clemsonMechE.png"
 company: Clemson University Department of Mechanical Engineering
 location: Clemson, South Carolina
 start_date: August 2023

@@ -1,6 +1,8 @@
 ---
 layout: experience
 title: Electrical Systems Engineer
+# Optional company logo path, for example: /assets/img/company-logo.png
+logo: "/assets/img/DukeMotorsports.Navy.png"
 company: Duke Motorsports
 location: Durham, North Carolina
 start_date: August 2025

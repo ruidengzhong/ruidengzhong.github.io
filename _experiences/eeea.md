@@ -1,6 +1,8 @@
 ---
 layout: experience
 title: Quality Engineering Intern
+# Optional company logo path, for example: /assets/img/company-logo.png
+logo: "/assets/img/eeea-tri.png"
 company: EEEA Inc.
 location: Simpsonville, South Carolina
 start_date: May 2026
