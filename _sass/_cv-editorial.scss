@@ -7,8 +7,8 @@ body.cv-editorial-page {
   .cv-hero {
     position: relative;
     isolation: isolate;
-    padding: 32px 0 40px;
-    border-bottom: 1px solid var(--global-divider-color);
+    // Keep the title spacing inside the background, directly below the navbar.
+    padding: 80px 0 40px;
   }
   .cv-stripes {
     position: absolute;

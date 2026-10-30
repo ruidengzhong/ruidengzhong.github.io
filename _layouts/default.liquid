@@ -26,7 +26,7 @@
 
     <!-- Content -->
     <div
-      class="container mt-5 site-content{% if page.home_hero %} home-content{% endif %}"
+      class="container{% unless page.experience_timeline or page.cv_editorial %} mt-5{% endunless %} site-content{% if page.home_hero %} home-content{% endif %}"
       role="main"
     >
       {% if page.toc and page.toc.sidebar %}

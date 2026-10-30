@@ -8,8 +8,9 @@ body.experience-index-page {
   .experience-header {
     position: relative;
     isolation: isolate;
-    padding: 32px 24px 44px;
-    margin: -16px -24px 16px;
+    // Keep the title spacing inside the background, directly below the navbar.
+    padding: 64px 24px 44px;
+    margin: 0 -24px 16px;
   }
   .experience-stripes {
     position: absolute;
@@ -175,8 +176,8 @@ html[data-theme="dark"] .experience-page {
 @media (max-width: 650px) {
   .experience-page {
     .experience-header {
-      margin: -16px 0 12px;
-      padding: 24px 0 32px;
+      margin: 0 0 12px;
+      padding: 56px 0 32px;
     }
     .timeline-entry {
       grid-template-columns: minmax(0, 1fr);
