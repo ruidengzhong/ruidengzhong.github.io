@@ -25,7 +25,10 @@
     {% include header.liquid %}
 
     <!-- Content -->
-    <div class="container mt-5 site-content{% if page.home_hero %} home-content{% endif %}" role="main">
+    <div
+      class="container mt-5 site-content{% if page.home_hero %} home-content{% endif %}{% if page.experience_timeline %} experience-content{% endif %}"
+      role="main"
+    >
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">

@@ -8,7 +8,7 @@ layout: default
   {% assign section_title = 'Projects' %}
   {% assign section_url = '/projects/' %}
 {% endif %}
-<article class="portfolio-detail">
+<article class="portfolio-detail{% if page.collection == 'experiences' %} experience-detail{% endif %}">
   <a class="section-back" href="{{ section_url | relative_url }}">&larr; {{ section_title }}</a>
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
@@ -17,10 +17,13 @@ layout: default
       <p class="detail-company">{{ page.company }}</p>
     {% endif %}
     <div class="detail-meta">
+      {% if page.collection == 'experiences' and page.location %}
+        <span>{{ page.location }}</span>
+      {% endif %}
       {% if page.start_date -%}
         <span>{{ page.start_date }} &ndash; {{ page.end_date | default: 'Present' }}</span>
       {%- endif %}
-      {% if page.location -%}
+      {% if page.collection != 'experiences' and page.location -%}
         <span>{{ page.location }}</span>
       {%- endif %}
       {% if page.status -%}

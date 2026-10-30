@@ -1,10 +1,15 @@
+.experience-content.container {
+  max-width: none;
+  padding: 0;
+}
+
 .experience-page {
   --experience-stripe: #e8f0fa;
   .experience-header {
     position: relative;
     isolation: isolate;
-    padding: 32px 24px 44px;
-    margin: -16px -24px 16px;
+    padding: 32px 0 44px;
+    margin: -16px 0 16px;
   }
   .experience-stripes {
     position: absolute;
@@ -205,5 +210,18 @@ html[data-theme="dark"] .experience-page {
   }
   .timeline-entry {
     break-inside: avoid;
+  }
+}
+
+.portfolio-detail.experience-detail {
+  .detail-company {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .detail-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
   }
 }

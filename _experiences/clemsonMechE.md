@@ -13,8 +13,8 @@ image: /assets/img/flourDanielBuilding.jpg
 image_alt: Clemson University mechanical engineering building
 outcome: "Reduced simulation runtime by 17% and presented findings at ASME IMECE 2024. Simulations identified a lattice-relaxation mechanism but did not produce LOPC."
 contributions:
-  - "Built and ran simulations of face-centered cubic C₆₀ structures under varying temperature, potential, and compression conditions."
-  - "Optimized C++ simulation programs on Clemson’s Palmetto 2 computing cluster."
+  - "Built and ran simulations of face-centered cubic C₆₀ structures under varying temperature, potential, and compression conditions on Clemson’s Palmetto 2 computing cluster."
+  - "Optimized C++ simulation programs to reduce LAMMPS runtime by 17%."
   - "Analyzed simulation outputs in Python and visualized deformation with VMD."
 tools:
   - "LAMMPS"
