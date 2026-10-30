@@ -73,7 +73,7 @@ I’m open to internship and research opportunities in any location where I can 
 <h2 id="outside-title">Out of the<br>Classroom</h2>
 <div class="home-story-copy" markdown="1">
 
-I play clarinet and serve as treasurer in the [Duke Marching Band](https://www.dukeband.org/). Outside engineering and music, I enjoy running, hiking, piano, Minecraft, spikeball, and frisbee. I also follow Tottenham Hotspur, Duke athletics, and McLaren F1.
+I play clarinet and serve as treasurer in the [Duke Marching Band](https://www.dukeband.org/). Outside engineering and band, I enjoy running, hiking, Minecraft, bouldering, and playing the piano. I am a big fan Tottenham Hotspur, Duke athletics, and McLaren F1.
 
 </div>
 </div>
