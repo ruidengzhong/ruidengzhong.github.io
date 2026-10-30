@@ -4,15 +4,13 @@ layout: default
 <div class="experience-page">
   <header class="experience-header">
     <div class="experience-stripes" aria-hidden="true"><div class="experience-stripe-track"></div></div>
-    <div class="container">
-      <p class="experience-eyebrow">Engineering · Research · Quality</p>
-      <h1>{{ page.title | escape }}</h1>
-      <p class="experience-intro">{{ page.description | escape }}</p>
-      <a class="experience-cv" href="{{ '/cv/' | relative_url }}">View my CV <span aria-hidden="true">↗</span></a>
-    </div>
+    <p class="experience-eyebrow">Engineering · Research · Quality</p>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="experience-intro">{{ page.description | escape }}</p>
+    <a class="experience-cv" href="{{ '/cv/' | relative_url }}">View my CV <span aria-hidden="true">↗</span></a>
   </header>
   {{ content }}
-  <div class="experience-timeline container">
+  <div class="experience-timeline">
     {% assign sorted_experiences = site.experiences | sort: 'order' %}
     {% for experience in sorted_experiences %}
       <article class="timeline-entry">

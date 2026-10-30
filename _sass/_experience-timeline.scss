@@ -1,6 +1,6 @@
-.experience-content.container {
-  max-width: none;
-  padding: 0;
+// Clip the decorative viewport-wide layer without changing the content grid.
+body.experience-index-page {
+  overflow-x: clip;
 }
 
 .experience-page {
@@ -8,12 +8,16 @@
   .experience-header {
     position: relative;
     isolation: isolate;
-    padding: 32px 0 44px;
-    margin: -16px 0 16px;
+    padding: 32px 24px 44px;
+    margin: -16px -24px 16px;
   }
   .experience-stripes {
     position: absolute;
-    inset: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
     overflow: hidden;
     z-index: -1;
     pointer-events: none;

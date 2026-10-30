@@ -16,7 +16,7 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}{% if page.experience_timeline %} experience-index-page{% endif %}">
     {% unless page.home_hero or page.experience_timeline %}
       <div class="ambient-line" aria-hidden="true"><span></span></div>
     {% endunless %}
@@ -26,7 +26,7 @@
 
     <!-- Content -->
     <div
-      class="container mt-5 site-content{% if page.home_hero %} home-content{% endif %}{% if page.experience_timeline %} experience-content{% endif %}"
+      class="container mt-5 site-content{% if page.home_hero %} home-content{% endif %}"
       role="main"
     >
       {% if page.toc and page.toc.sidebar %}
