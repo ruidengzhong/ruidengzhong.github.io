@@ -1,0 +1,119 @@
+---
+layout: default
+---
+{% assign cv = site.data.cv.cv %}
+<div class="cv-editorial">
+  <header class="cv-hero">
+    <div class="cv-stripes" aria-hidden="true"><div class="cv-stripe-track"></div></div>
+    <p class="cv-eyebrow">{{ page.tagline | escape }}</p>
+    <h1>{{ page.heading | default: page.title | escape }}</h1>
+    <p class="cv-identity">{{ cv.name | escape }}</p>
+    {% assign education = cv.sections.Education | first %}
+    <p class="cv-subtitle">{{ education.area | escape }} · {{ education.institution | escape }}</p>
+    <div class="cv-actions">
+      {% if page.cv_pdf %}
+        {% assign pdf_url = page.cv_pdf %}
+        {% unless pdf_url contains '://' %}{% assign pdf_url = pdf_url | relative_url %}{% endunless %}
+        <a class="cv-download" href="{{ pdf_url }}" download>Download PDF <span aria-hidden="true">↓</span></a>
+      {% endif %}
+      {% if cv.email -%}
+        <a href="mailto:{{ cv.email | escape }}">{{ cv.email | escape }}</a>
+      {%- endif %}
+    </div>
+  </header>
+  {{ content }}
+  {% for section in cv.sections %}
+    {% assign section_name = section[0] %}
+    <section class="cv-section" aria-labelledby="cv-{{ section_name | slugify }}">
+      <h2 id="cv-{{ section_name | slugify }}">
+        {% if section_name == 'Skills' %}Technical skills{% else %}{{ section_name | escape }}{% endif %}
+      </h2>
+      <div class="cv-section-content">
+        {% for entry in section[1] %}
+          {% case section_name %}
+            {% when 'Education' %}
+              <article class="cv-entry">
+                <h3>
+                  {% if entry.url -%}
+                    <a href="{{ entry.url }}">{{ entry.institution | escape }}</a>
+                  {%- else -%}
+                    {{- entry.institution | escape -}}
+                  {%- endif %}
+                </h3>
+                <p>{{ entry.studyType | escape }}, {{ entry.area | escape }}</p>
+                <p class="cv-meta">{{ entry.location | escape }}</p>
+                <p class="cv-meta">{{ entry.start_date | escape }} – {{ entry.end_date | default: 'Present' | escape }}</p>
+                {% if entry.highlights %}
+                  <div class="cv-highlights">{{ entry.highlights | markdownify }}</div>
+                {% endif %}
+                {% if entry.courses.size > 0 %}
+                  <details class="cv-coursework">
+                    <summary>Classes taken</summary>
+                    <ul>
+                      {% for course in entry.courses %}
+                        <li>{{ course | escape }}</li>
+                      {% endfor %}
+                    </ul>
+                  </details>
+                {% endif %}
+              </article>
+            {% when 'Experience', 'Volunteer' %}
+              <article class="cv-entry">
+                <h3>{{ entry.position | escape }}</h3>
+                <p class="cv-company">{{ entry.company | escape }}</p>
+                <p class="cv-meta">{{ entry.location | escape }}</p>
+                <p class="cv-meta">{{ entry.start_date | escape }} – {{ entry.end_date | default: 'Present' | escape }}</p>
+                {% if entry.summary %}{{ entry.summary | markdownify }}{% endif %}
+                {% if entry.highlights.size > 0 %}
+                  <ul class="cv-highlights">
+                    {% for highlight in entry.highlights %}
+                      <li>{{ highlight | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </article>
+            {% when 'Skills' %}
+              <div class="cv-skill-group">
+                <h3>{{ entry.name | escape }}</h3>
+                <ul class="cv-skill-list" aria-label="{{ entry.name | escape }} skills">
+                  {% comment %}Keep commas inside parenthesized skill names together; also accept YAML lists.{% endcomment %}
+                  {% assign keywords_type = entry.keywords | jsonify | slice: 0 %}
+                  {% if keywords_type == '[' %}
+                    {% for skill in entry.keywords %}
+                      <li>{{ skill | escape }}</li>
+                    {% endfor %}
+                  {% else %}
+                    {% assign parts = entry.keywords | split: ', ' %}
+                    {% assign skill = '' %}
+                    {% assign in_parentheses = false %}
+                    {% for part in parts %}
+                      {% if skill != '' %}{% assign skill = skill | append: ', ' %}{% endif %}
+                      {% assign skill = skill | append: part %}
+                      {% if part contains '(' %}{% assign in_parentheses = true %}{% endif %}
+                      {% if part contains ')' %}{% assign in_parentheses = false %}{% endif %}
+                      {% if in_parentheses == false or forloop.last %}
+                        <li>{{ skill | escape }}</li>
+                        {% assign skill = '' %}
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                </ul>
+              </div>
+            {% when 'Languages' %}
+              <p class="cv-language">
+                <strong>{{ entry.name | escape }}</strong><span>{{ entry.summary | escape }}</span>
+              </p>
+            {% else %}
+              {% if entry.bullet %}
+                {{ entry.bullet | markdownify }}
+              {% elsif entry.label %}
+                <p>
+                  <strong>{{ entry.label | escape }}:</strong> {{ entry.details | escape }}
+                </p>
+              {% endif %}
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+</div>

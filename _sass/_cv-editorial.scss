@@ -1,0 +1,210 @@
+body.cv-editorial-page {
+  overflow-x: clip;
+}
+
+.cv-editorial {
+  --cv-stripe: #e8f0fa;
+  .cv-hero {
+    position: relative;
+    isolation: isolate;
+    padding: 32px 0 40px;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+  .cv-stripes {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+  }
+  .cv-stripe-track {
+    position: absolute;
+    inset: 0 auto 0 -100%;
+    width: 300%;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, var(--global-bg-color) 55%, var(--cv-stripe) 55%);
+      background-size: calc(100% / 3) 100%;
+      transform: skewX(-20deg);
+    }
+  }
+  .cv-eyebrow {
+    color: var(--global-theme-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    margin-bottom: 20px;
+  }
+  .cv-identity {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+  .cv-subtitle,
+  .cv-meta {
+    color: var(--global-text-color-light);
+  }
+  .cv-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+    font-size: 0.875rem;
+  }
+  .cv-actions a {
+    overflow-wrap: anywhere;
+  }
+  .cv-download {
+    display: inline-flex;
+    gap: 12px;
+    padding: 10px 16px;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    background: var(--global-bg-color);
+  }
+  .cv-download span {
+    color: inherit;
+  }
+  .cv-section {
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 32px;
+    padding: 36px 0;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+  h2 {
+    color: var(--global-theme-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  h3 a {
+    color: inherit;
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+  .cv-entry + .cv-entry {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid var(--global-divider-color);
+  }
+  .cv-entry p {
+    margin-bottom: 8px;
+  }
+  .cv-meta {
+    font-size: 0.85rem;
+  }
+  .cv-highlights {
+    margin-top: 16px;
+  }
+  ul.cv-highlights,
+  .cv-coursework ul {
+    padding-left: 20px;
+  }
+  .cv-highlights li,
+  .cv-coursework li {
+    margin-bottom: 8px;
+  }
+  .cv-coursework {
+    margin-top: 16px;
+  }
+  .cv-coursework summary {
+    color: var(--global-theme-color);
+    cursor: pointer;
+    padding: 8px 0;
+  }
+  .cv-coursework summary:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 4px;
+  }
+  .cv-coursework ul {
+    margin-top: 12px;
+  }
+  .cv-skill-group + .cv-skill-group {
+    margin-top: 24px;
+  }
+  .cv-skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 12px 0 0;
+    list-style: none;
+  }
+  .cv-skill-list li {
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: var(--cv-stripe);
+    color: var(--global-text-color);
+    font-size: 0.85rem;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .cv-language {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin-bottom: 14px;
+  }
+  .cv-language strong {
+    min-width: 75px;
+    font-weight: 600;
+  }
+  .cv-language span {
+    color: var(--global-text-color-light);
+  }
+}
+html[data-theme="dark"] .cv-editorial {
+  --cv-stripe: #182a40;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .cv-stripe-track {
+    animation: home-block-drift 42s linear infinite;
+    animation-play-state: paused;
+  }
+  html[data-motion="on"] .cv-stripe-track {
+    animation-play-state: running;
+  }
+}
+@media (max-width: 650px) {
+  .cv-editorial {
+    .cv-section {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+      padding: 28px 0;
+    }
+  }
+}
+@media print {
+  .cv-editorial {
+    .cv-stripes,
+    .cv-actions {
+      display: none;
+    }
+    .cv-entry,
+    .cv-skill-group {
+      break-inside: avoid;
+    }
+    .cv-section {
+      display: block;
+    }
+  }
+}
