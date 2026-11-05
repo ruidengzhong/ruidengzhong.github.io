@@ -30,13 +30,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-teaching",
-          title: "Teaching",
-          description: "Undergraduate teaching support in computer architecture at Duke University.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/teaching/";
-          },
         },{id: "experiences-lab-aide",
           title: 'Lab Aide',
           description: "3D-printing workflows and materials research for biomedical fabrication.",
@@ -57,6 +50,11 @@ ninja.data = [{
           description: "Quality systems, inspection, and process improvement in electronics manufacturing.",
           section: "Experiences",handler: () => {
               window.location.href = "/experiences/eeea/";
+            },},{id: "experiences-undergraduate-teaching-assistant",
+          title: 'Undergraduate Teaching Assistant',
+          description: "Teaching support for ECE/CS 250: Computer Architecture, helping students connect computer hardware with the software it executes.",
+          section: "Experiences",handler: () => {
+              window.location.href = "/experiences/teaching-assistant/";
             },},{id: "projects-fpga-image-acceleration",
           title: 'FPGA Image Acceleration',
           description: "Pipelined Sobel edge detection on a Xilinx Zynq-7020 FPGA.",
@@ -102,11 +100,6 @@ ninja.data = [{
           description: "Electrical harness development for the 2026–2027 Duke Motorsports car.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/wireHarness2027/";
-            },},{id: "teachings-ece-cs-250-computer-architecture",
-          title: 'ECE/CS 250 - Computer Architecture',
-          description: "Undergraduate teaching assistant for ECE/CS 250, covering how computer hardware executes software.",
-          section: "Teachings",handler: () => {
-              window.location.href = "/teachings/computer-architecture/";
             },},{
         id: 'social-cv',
         title: 'CV',
