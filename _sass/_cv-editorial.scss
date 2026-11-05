@@ -8,7 +8,7 @@ body.cv-editorial-page {
     position: relative;
     isolation: isolate;
     // Keep the title spacing inside the background, directly below the navbar.
-    padding: 80px 0 40px;
+    padding: 64px 0 40px;
   }
   .cv-stripes {
     position: absolute;
@@ -186,6 +186,9 @@ html[data-theme="dark"] .cv-editorial {
 }
 @media (max-width: 650px) {
   .cv-editorial {
+    .cv-hero {
+      padding-top: 56px;
+    }
     .cv-section {
       grid-template-columns: minmax(0, 1fr);
       gap: 16px;

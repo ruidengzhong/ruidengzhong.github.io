@@ -1,11 +1,10 @@
 ---
 layout: page
 permalink: /teaching/
-title: Teaching
-description: Undergraduate teaching support in computer architecture at Duke University.
-nav: true
-nav_order: 6
-calendar: true
+title: Teaching experience
+nav: false
+sitemap: false
+redirect: /experiences/teaching-assistant/
 ---
 
-{% include courses.liquid %}
+Teaching is now part of my [Work Experience]({{ '/experiences/teaching-assistant/' | relative_url }}).

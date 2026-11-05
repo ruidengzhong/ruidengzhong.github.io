@@ -7,7 +7,7 @@ company: Clemson University Department of Mechanical Engineering
 location: Clemson, South Carolina
 start_date: August 2023
 end_date: August 2024
-order: 4
+order: 5
 description: "Molecular dynamics research on C₆₀ fullerene structures under compression."
 image: /assets/img/flourDanielBuilding.jpg
 image_alt: Clemson University mechanical engineering building

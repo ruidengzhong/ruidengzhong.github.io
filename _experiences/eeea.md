@@ -7,7 +7,7 @@ company: EEEA Inc.
 location: Simpsonville, South Carolina
 start_date: May 2026
 end_date: August 2026
-order: 2
+order: 3
 description: "Quality systems, inspection, and process improvement in electronics manufacturing."
 image:
 image_alt:

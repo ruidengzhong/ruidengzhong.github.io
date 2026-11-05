@@ -149,8 +149,6 @@ collections:
     output: true
   projects:
     output: true
-  teachings:
-    output: true
   experiences:
     output: true
     permalink: /experiences/:name/
@@ -244,11 +242,6 @@ defaults:
       type: experiences
     values:
       nav_parent: /experience/
-  - scope:
-      path: ""
-      type: teachings
-    values:
-      nav_parent: /teaching/
   - scope:
       path: "assets"
     values:

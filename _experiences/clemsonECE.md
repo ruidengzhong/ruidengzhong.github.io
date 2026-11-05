@@ -7,7 +7,7 @@ company: Clemson University Department of Electrical and Computer Engineering
 location: Clemson, South Carolina and Anderson, South Carolina
 start_date: August 2023
 end_date: August 2025
-order: 3
+order: 4
 description: "3D-printing workflows and materials research for biomedical fabrication."
 image: /assets/img/amrlBuilding.jpg
 image_alt: AMRL Building
