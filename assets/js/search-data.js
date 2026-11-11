@@ -57,7 +57,7 @@ ninja.data = [{
               window.location.href = "/experiences/teaching-assistant/";
             },},{id: "projects-fpga-image-acceleration",
           title: 'FPGA Image Acceleration',
-          description: "Pipelined Sobel edge detection on a Xilinx Zynq-7020 FPGA.",
+          description: "Introductory participation in a graduate-student-led project exploring FPGA acceleration of Sobel edge detection.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/FPGAAcceleration/";
             },},{id: "projects-12-v-7-v-buck-converter",
