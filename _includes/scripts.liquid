@@ -379,6 +379,6 @@
 
 <script defer src="{{ "/assets/js/ambient-motion.js" | relative_url | bust_file_cache }}"></script>
 
-{% if page.experience_timeline %}
+{% if page.experience_timeline or page.project_timeline %}
   <script defer src="{{ "/assets/js/experience-reveal.js" | relative_url | bust_file_cache }}"></script>
 {% endif %}

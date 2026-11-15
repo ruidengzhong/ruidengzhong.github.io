@@ -4,6 +4,11 @@ title: "Strain Gauge PCB"
 description: "An instrumentation-amplifier board for conditioning small strain-gauge signals."
 img: assets/img/strainGaugePCB.png
 importance: 16
+# Optional dates, for example: "August 2026". Leave blank to hide.
+start_date: "April 2026"
+end_date: "September 2026"
+# Set to true to show the In progress badge; false hides it.
+in_progress: false
 tools:
   - "Altium"
   - "PCB Assembly"

@@ -4,6 +4,11 @@ title: "FPGA Image Acceleration"
 description: "Introductory participation in a graduate-student-led project exploring FPGA acceleration of Sobel edge detection."
 img:
 importance: 20
+# Optional dates, for example: "August 2026". Leave blank to hide.
+start_date: "June 2024"
+end_date: "August 2025"
+# Set to true to show the In progress badge; false hides it.
+in_progress: false
 tools:
   - "FPGA"
   - "Vivado"

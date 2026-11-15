@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<div class="experience-page projects-timeline-page">
+  <header class="experience-header">
+    <div class="experience-stripes" aria-hidden="true"><div class="experience-stripe-track"></div></div>
+    <p class="experience-eyebrow">Design · Build · Test</p>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="experience-intro">{{ page.description | escape }}</p>
+  </header>
+  {{ content }}
+  <div class="experience-timeline">
+    {% assign sorted_projects = site.projects | sort: 'importance' %}
+    {% for project in sorted_projects %}
+      {% assign project_url = project.url | relative_url %}
+      {% if project.redirect %}{% assign project_url = project.redirect %}{% endif %}
+      <article class="timeline-entry">
+        <div class="timeline-meta">
+          {% capture dates %}{% include project-dates.liquid project=project %}{% endcapture %}
+          {% assign dates = dates | strip %}
+          {% if dates != '' %}
+            <p class="timeline-dates">{{ dates }}</p>
+          {% endif %}
+          {% if project.img != blank and project.img %}
+            <a class="project-cover" href="{{ project_url }}" aria-label="Explore {{ project.title | escape }}">
+              <img src="{{ project.img | relative_url }}" alt="{{ project.title | escape }}" width="190" height="128" loading="lazy">
+            </a>
+          {% endif %}
+        </div>
+        <div class="timeline-body">
+          {% if project.in_progress -%}
+            <span class="timeline-current">In progress</span>
+          {%- endif %}
+          <h2>
+            <a href="{{ project_url }}">{{ project.title | escape }}</a>
+          </h2>
+          <p class="timeline-summary">{{ project.description | escape }}</p>
+          {% if project.tools.size > 0 %}
+            <ul class="project-skill-tags" aria-label="Tools and skills">
+              {% for tool in project.tools %}
+                <li>{{ tool | escape }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          <a class="timeline-more" href="{{ project_url }}">Explore project <span aria-hidden="true">↗</span></a>
+          {% if project.github -%}
+            <a class="project-source" href="{{ project.github }}">View code <span aria-hidden="true">↗</span></a>
+          {%- endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>

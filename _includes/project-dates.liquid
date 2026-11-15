@@ -1,0 +1,12 @@
+{%- assign start_date = include.project.start_date | default: '' | strip -%}
+{%- assign end_date = include.project.end_date | default: '' | strip -%}
+{%- if start_date != '' -%}
+  {{- start_date | escape -}}
+  {%- if end_date != '' %}
+    – {{ end_date | escape }}
+  {%- elsif include.project.in_progress %}
+    – Present
+  {%- endif -%}
+{%- elsif end_date != '' -%}
+  {{- end_date | escape -}}
+{%- endif -%}

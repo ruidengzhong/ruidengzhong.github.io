@@ -4,6 +4,11 @@ title: "16-Bit MIPS-Style CPU"
 description: "A programmable processor built from custom gate-level components in Logisim."
 img: assets/img/cpu.png
 importance: 17
+# Optional dates, for example: "August 2026". Leave blank to hide.
+start_date: "February 2026"
+end_date: "April 2026"
+# Set to true to show the In progress badge; false hides it.
+in_progress: false
 tools:
   - "Logisim"
   - "Digital Logic Design"

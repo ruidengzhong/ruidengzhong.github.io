@@ -230,3 +230,41 @@ html[data-theme="dark"] .experience-page {
     gap: 0.35rem;
   }
 }
+
+// Project entries share the experience timeline and header geometry.
+.projects-timeline-page {
+  .project-cover {
+    display: block;
+    width: 190px;
+    max-width: 100%;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .project-cover img {
+    display: block;
+    width: 100%;
+    height: 128px;
+    object-fit: contain;
+  }
+  .project-skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+  }
+  .project-skill-tags li {
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    background: var(--experience-stripe);
+  }
+  .project-source {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 0.875rem;
+  }
+}

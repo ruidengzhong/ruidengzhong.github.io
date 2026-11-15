@@ -16,8 +16,8 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}{% if page.experience_timeline %} experience-index-page{% endif %}{% if page.cv_editorial %} cv-editorial-page{% endif %}">
-    {% unless page.home_hero or page.experience_timeline or page.cv_editorial %}
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}{% if page.experience_timeline or page.project_timeline %} experience-index-page{% endif %}{% if page.cv_editorial %} cv-editorial-page{% endif %}">
+    {% unless page.home_hero or page.experience_timeline or page.project_timeline or page.cv_editorial %}
       <div class="ambient-line" aria-hidden="true"><span></span></div>
     {% endunless %}
 
@@ -26,7 +26,7 @@
 
     <!-- Content -->
     <div
-      class="container{% unless page.experience_timeline or page.cv_editorial %} mt-5{% endunless %} site-content{% if page.home_hero %} home-content{% endif %}"
+      class="container{% unless page.experience_timeline or page.project_timeline or page.cv_editorial %} mt-5{% endunless %} site-content{% if page.home_hero %} home-content{% endif %}"
       role="main"
     >
       {% if page.toc and page.toc.sidebar %}

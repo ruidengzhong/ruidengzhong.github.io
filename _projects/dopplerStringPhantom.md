@@ -4,6 +4,11 @@ title: "Doppler String Phantom"
 description: "An adjustable, low-cost platform for Doppler ultrasound experiments."
 img: assets/img/dopplerPhoto.jpg
 importance: 19
+# Optional dates, for example: "August 2026". Leave blank to hide.
+start_date: "August 2025"
+end_date: "December 2025"
+# Set to true to show the In progress badge; false hides it.
+in_progress: false
 tools:
   - "Python"
   - "Arduino"

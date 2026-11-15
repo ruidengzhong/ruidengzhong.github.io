@@ -4,6 +4,11 @@ title: "Thermal-Sensing Robot"
 description: "An Arduino robot combining line following, thermal sensing, and wireless data exchange."
 img: assets/img/idcTop.jpg
 importance: 18
+# Optional dates, for example: "August 2026". Leave blank to hide.
+start_date: "February 2026"
+end_date: "April 2026"
+# Set to true to show the In progress badge; false hides it.
+in_progress: false
 tools:
   - "Arduino Mega"
   - "IR Sensor"

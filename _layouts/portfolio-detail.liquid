@@ -9,6 +9,11 @@ layout: default
   {% assign section_url = '/projects/' %}
 {% endif %}
 <article class="portfolio-detail{% if page.collection == 'experiences' %} experience-detail{% endif %}">
+  {% assign display_status = page.status %}
+  {% if page.collection == 'projects' %}
+    {% assign display_status = null %}
+    {% if page.in_progress %}{% assign display_status = 'In progress' %}{% endif %}
+  {% endif %}
   <a class="section-back" href="{{ section_url | relative_url }}">&larr; {{ section_title }}</a>
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
@@ -20,14 +25,20 @@ layout: default
       {% if page.collection == 'experiences' and page.location %}
         <span>{{ page.location }}</span>
       {% endif %}
-      {% if page.start_date -%}
+      {% if page.collection == 'projects' %}
+        {% capture project_dates %}{% include project-dates.liquid project=page %}{% endcapture %}
+        {% assign project_dates = project_dates | strip %}
+        {% if project_dates != '' -%}
+          <span>{{ project_dates }}</span>
+        {%- endif %}
+      {% elsif page.start_date -%}
         <span>{{ page.start_date }} &ndash; {{ page.end_date | default: 'Present' }}</span>
       {%- endif %}
       {% if page.collection != 'experiences' and page.location -%}
         <span>{{ page.location }}</span>
       {%- endif %}
-      {% if page.status -%}
-        <span class="status-label">{{ page.status }}</span>
+      {% if display_status -%}
+        <span class="status-label">{{ display_status }}</span>
       {%- endif %}
     </div>
     {% if page.tools %}
@@ -39,9 +50,9 @@ layout: default
     {% endif %}
   </header>
   {% if page.outcome %}
-    <section class="outcome-panel" aria-label="{% if page.status == 'In progress' %}Current focus{% else %}Key outcome{% endif %}">
+    <section class="outcome-panel" aria-label="{% if display_status == 'In progress' %}Current focus{% else %}Key outcome{% endif %}">
       <h2>
-        {% if page.status == 'In progress' %}Current focus{% else %}Key outcome{% endif %}
+        {% if display_status == 'In progress' %}Current focus{% else %}Key outcome{% endif %}
       </h2>
       <p>{{ page.outcome | escape }}</p>
     </section>

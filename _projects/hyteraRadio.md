@@ -4,6 +4,11 @@ title: "Hytera Radio Harness"
 description: "Serviceable race-car wiring connecting the driver’s headset, radio, and steering-wheel button."
 img: assets/img/project1_radio.jpeg
 importance: 15
+# Optional dates, for example: "August 2026". Leave blank to hide.
+start_date: "May 2026"
+end_date: "September 2026"
+# Set to true to show the In progress badge; false hides it.
+in_progress: false
 tools:
   - "Altium"
   - "Digital Multimeter"
