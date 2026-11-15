@@ -13,7 +13,7 @@ tools:
   - "Altium"
   - "PCB Assembly"
   - "Soldering"
-  - "MoTeC M1 Tune"
+  - "MoTeC C185 Dash Manager"
 outcome: "Completed a two-layer PCB design combining the sensor interface, amplification, reference circuit, and output connections."
 contributions:
   - "Designed the signal-conditioning schematic and PCB layout in Altium."

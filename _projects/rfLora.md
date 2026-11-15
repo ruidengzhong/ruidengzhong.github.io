@@ -11,6 +11,7 @@ end_date: ""
 in_progress: true
 tools:
   - "KiCad"
+  - "STM32"
   - "PCB Assembly"
   - "Soldering"
 outcome: "Developing an RF LoRa module for integration into a full ChipSat module."

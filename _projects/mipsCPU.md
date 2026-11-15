@@ -11,6 +11,7 @@ end_date: "April 2026"
 in_progress: false
 tools:
   - "Logisim"
+  - "MIPS"
   - "Digital Logic Design"
   - "Computer Architecture"
 outcome: "Built a processor supporting arithmetic, logic, memory access, shifts, and control flow."

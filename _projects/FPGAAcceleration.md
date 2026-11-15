@@ -11,6 +11,7 @@ end_date: "August 2025"
 in_progress: false
 tools:
   - "FPGA"
+  - "Verilog"
   - "Vivado"
 contributions:
   - "Participated alongside graduate students in a lab-based FPGA image-processing project."
