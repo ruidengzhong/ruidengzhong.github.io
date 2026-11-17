@@ -97,7 +97,7 @@ ninja.data = [{
               window.location.href = "/projects/strainGauge/";
             },},{id: "projects-fsae-wiring-harness",
           title: 'FSAE Wiring Harness',
-          description: "Wiring harness development for the 2026–2027 Duke Motorsports car, connecting electrical design with vehicle packaging.",
+          description: "Wiring harness development for the 2026-2027 Duke Motorsports car, connecting electrical design with vehicle packaging.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/wireHarness2027/";
             },},{
